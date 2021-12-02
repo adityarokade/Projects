@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admissionform.css') }}">
+    <!-- <link rel="stylesheet" href="/static/css/admissionform.css"> -->
+    <title>student application form </title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navlogo"><a><img src="{{ url_for('static', filename='images/logo/logo.png') }}"></a></div>
+        <ul class="navitems">
+            <li class="item"><a href="#personaldetail">Personal details</a></li>
+            <li class="item"><a href="#addressdetail">Address details</a></li>
+            <li class="item"><a href="#educationdetail">education details</a></li>
+            <li class="item"><a href="#coursedetail">Course details</a></li>
+        </ul>
+    </nav>
+    <h1 class="heading">Student Form</h1>
+    <p class="para">WELCOME,in this please write correct information and in sequence here every field is required 
+        if you are writing any wrong information then your application is rejected and you will not able to 
+        get admision, and wrere is required write in that dataype. and if you focus any quiry then contact with
+        our support team.-123456789 <p>
+    <form action="/form" method="POST" id="form">
+        <section class="personal" id="personaldetail">
+            <h2> -:Personal details:-</h2>
+            <div class="names">
+                <div class="longname">
+                    <label for="fullname">Student Full Name:</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name:" autofocus required>
+                </div>
+                <div class="longname">
+                    <label for="fname"> Father:</label>
+                    <input type="text" name="fname" id="fname" placeholder="Father's Full Name:"  required>
+                </div>
+                <div class="father">
+                    <label for="fathereducation">Father's Education:</label>
+                    <input type="text" name="fathereducation" id="fathereducation" placeholder="Father's education:"  required>
+                    <label for="fatherOccupation" class="labelname">Father's Occupation:</label>
+                    <input type="text" name="fatherOccupation" id="fatherOccupation" placeholder="Father's Occupation:"  required>
+                </div>
+                <div class="longname">
+                    <label for="mname">Mother</label>
+                    <input type="text" name="mname" id="mname" placeholder="Mother's Full Name:"  required>
+                </div>
+                <div class="mother">
+                    <label for="mothereducation">Mother's Education:</label>
+                    <input type="text" id="mothereducation" name="mothereducation" placeholder="Mother's education:" required>
+                    <label for="motherOccupation" class="labelname">Mother's Occupation:</label>
+                    <input type="text" id="motherOccupation" name="motherOccupation" placeholder="Mother's Occupation:" required>
+                </div>
+            </div>
+            <div class="otherinfo">
+                <div class="info1">
+                    <label for="gender">Gender:-</label>
+                    <input type="text" name="gender" id="gender" placeholder="Gender-Male/Female" required>
+                    <label for="age">Age:-</label>
+                    <input type="number" name="age" id="age" placeholder="Enter Age" required>
+                    <label for="dob">Date of birth:</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+                <div class="info2">
+                    <label for="addher">Addher-NO.</label>
+                    <input type="text" name="addher" id="addher" placeholder="Enter addher no:-" required>
+                    <label for="mob">Mobile-No.</label>
+                    <input type="number" name="mob" id="mob" placeholder="Enter mobile no:-" required>
+                    <label for="email">Email-id.</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email-id:-" required>
+                </div>
+            </div>
+
+        </section>
+        <section class="address" id="addressdetail">
+            <h2>-:Address details:-</h2>
+
+            <label for="current_address" class="addresslabel">Current Address:</label>
+            <textarea name="current_address"  id="current-address" cols="30" rows="10"
+                placeholder="Enter the Current Address:-" required></textarea>
+
+
+            <label for="permanent_address" class="addresslabel">Permanent Address:</label>
+            <textarea name="permanent_address" id="permanent-address" cols="30" rows="10"
+                placeholder="Enter the Permanent Address:-" required></textarea>
+
+        </section>
+        <section class="education" id="educationdetail">
+            <h2>-:Education details:-</h2>
+            <div class="Xth">
+                <div>
+                    <label for="Xthbordname">10th Board:-</label>
+                    <input type="text" list="Xthbord" id="Xthbordname" name="Xthbordname" placeholder="Xth Bord Name:-" required>
+                    <datalist id="Xthbord">
+                        <option value="SSC">SSC</option>
+                        <option value="CBSC">CBSC</option>
+                        <option value="ICSC">ICSC</option>
+                    </datalist>
+                    <label for="Xthyear" class="edulabel2">10th passing Year:-</label>
+                    <input type="text" name="Xthpassyear" id="Xthyear" placeholder="Enter 10th passed year:-" required>
+                </div>
+                <div>
+                    <label for="Xthmark">10th Mark's</label>
+                    <input type="text" name="Xthmark" id="Xthmark" placeholder="Enter 10th marks:-" required>
+                    <label for="Xthschoolname" class="edulabel2"></label>10th School:-</label>
+                    <input type="text" name="Xthschoolname" id="Xthschoolname" placeholder="Xth passed school:-" required>
+                </div>
+            </div>
+            <div class="12th">
+                <div>
+                    <label for="12thbordname">12th Board:-</label>
+                    <input type="text" list="12thbord" name="XIIthbordname" id="12thbordname"
+                        placeholder="12th Bord Name:-" required>
+                    <datalist id="12thbord">
+                        <option value="HSC">HSC</option>
+                        <option value="CBSC">CBSC</option>
+                        <option value="ICSC">ICSC</option>
+                    </datalist>
+                    <label for="12thyear">12th Year:-</label>
+                    <input type="text" name="XIIthpassyear" id="12thyear" placeholder="Enter 12th passed year:-" required>
+                </div>
+                <div>
+                    <label for="12thmark">12th Mark's</label>
+                    <input type="text" name="XIIthmark" id="12thmark" placeholder="Enter 12th marks:-" required>
+                    <label for="markinper">In Percentage(%)</label>
+                    <input type="text" name="inpercentage" id="markinper" placeholder="Enter the mark's in %" required>
+                </div>
+                <div>
+                    <label for="12thschoolname">12th School:-</label>
+                    <input type="text" name="schoolname" id="12thschoolname" placeholder="12th passed school:-" required>
+
+                    <label for="12thgroup">Group:-</label>
+                    <input type="text" list="12thgroup" name="XIIthgroup" placeholder="Enter 12th group:-" required>
+                    <datalist id="12thgroup">
+                        <option value="PCM">PCM</option>
+                        <option value="PCB">PCB</option>
+                        <option value="PCMB">PCMB</option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="math">Math:-</label>
+                    <input type="text" name="math" id="math" placeholder="Enter math mark's">
+                    <label for="biology" class="edulabel2">Biology</label>
+                    <input type="text" name="biology" id="biology" placeholder="Enter Biology mark's">
+                </div>
+                <div>
+                    <label for="chemistary">Chemistary:-</label>
+                    <input type="text" id="chemistary" name="chemistary" placeholder="Enter Chemistary mark's" required>
+                    <label for="physics">Physics:-</label>
+                    <input type="text" name="physics" id="physics" placeholder="Enter Physics mark's" required>
+                </div>
+            </div>
+
+        </section>
+        <section class="course" id="coursedetail">
+            <h2>-:Course details:-</h2>
+            <div>
+                <p class="para">In course details write the course name which you want to select 
+                    you can modify the course details after submitting form but not after checked by falculty
+                </p>
+            </div>
+            <div class="course1">
+                <label for="coursename">Choose the Course:-</label>
+                <input type="text" name="coursename" id="coursename" placeholder="Enter the course name:-" required>
+                <label for="coursetrend" class="edulabel2">Choose the sub-course:-</label>
+                <input type="text" name="subcourse" id="coursetrend" placeholder="Enter the trend:-" required>
+            </div>
+
+            
+        </section>
+        <div class="buttons">
+            <input class="submit btn" type="submit" value="Submit">
+            <input class="reset btn" type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+
+</html>

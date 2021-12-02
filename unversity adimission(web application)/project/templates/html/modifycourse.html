@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modifyco.css') }}">
+    <!-- <link rel="stylesheet" href="/static/css/modifyco.css"> -->
+    <title>modify course</title>
+</head>
+<body>
+    <section class="section1">
+        <div class="heading">
+            <h2>-:Course Details:-</h2>
+        </div>
+        <div class="form">
+            <form action="/mo" method="POST">
+                <div>
+                <label for="coursename">Old Course Name:</label>
+                <input type="text" id="coursename" name="coursename" placeholder="Enter old course name:" required autofocus>
+                <label for="coursetrend">Old field:-</label>
+                <input type="text" name="coursetrend" id="coursetrend" placeholder="Enter old field:" required>
+            </div><div>
+                <label for="coursename">New Course Name:</label>
+                <input type="text" id="newcoursename" name="newcoursename" placeholder="Enter new course name:" required>
+                <label for="coursetrend">New field:-</label>
+                <input type="text" name="newcoursetrend" id="newcoursetrend" placeholder="Enter new field:" required>
+            </div>
+            <div class="button"><input type="submit" value="Save" id="b1"></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

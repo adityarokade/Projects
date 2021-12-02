@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(184, 241, 241);
+    
+    
+
+}
+
+/* navbar css */
+.navbar{
+    display: flex;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    
+    
+    
+}
+.navlogo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    padding: 10px;
+    
+}
+.navitems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+}
+.navitems li{
+    list-style: none;
+}
+.item a{
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    margin: 5px 40px;
+    font-size: 20px;
+    color: rgb(167, 114, 114);
+}
+.item a:hover{
+    background: rgb(87, 233, 233);
+    border-radius: 10px;
+    color: rgb(105, 62, 103);
+}
+.heading{
+    text-align: center;
+    font-size: 70px;
+}
+.para{
+    text-align:center;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+/* form css */
+/* personal section */
+#form{
+    
+    width: 80%;
+    height: auto;
+    margin: auto;
+ border: 2px solid blue;
+
+    
+
+}
+
+#fullname,#fname,#mname{
+    width: 80%;
+}
+.longname{
+    margin: 30px 20px;
+}
+#fname,#mname{
+    margin-left: 83px;
+}
+.father,#mother{
+    display: flex;
+}
+.father input,.mother input{
+    width: 26%;
+    margin:0 25px;
+}
+.mother input{
+    margin: 0 18px;
+}
+.labelname{
+    margin-left: 50px;
+}
+
+.otherinfo input{
+    margin-left: 40px;
+}
+.info1{
+    display: flex;
+
+}
+.info1 input,.info1 label{
+    margin-top: 30px;
+    margin-left: 43px;
+}
+.info2 input,.info2 label{
+    margin-top: 30px;
+    margin-left: 35px;
+}
+.info1 input{
+    width: 15%;
+}
+.info2 input{
+    width: 15.5%;
+}
+.info2{
+    display:flex;
+}
+/* tags css */
+h2{ margin-top: 40px;
+    text-align: center;
+}
+input{
+    padding: 8px;
+    border: 1px solid black;
+}
+/* address section */
+.address{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 40px;
+}
+#current-address,#permanent-address{
+    width: 70%;
+    height: 20vh;
+    margin: auto;
+}
+
+
+.address label{
+    margin-top: 80px;
+    
+}
+/* Education section */
+.education{
+    
+    margin-top: 50px;
+}
+.education input{
+    width: 30%;
+    margin: 15px;
+}
+.Xth{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.edulabel2{
+    margin-left: 15px;
+}
+
+/* Coursesection */
+.course{
+   
+    margin-top: 70px;
+}
+.course1 input{
+    width: 30%;
+}
+.collagechoose{
+    display: flex;
+    justify-content: space-around;
+}
+/* buttons */
+.buttons{
+    margin-top: 140px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn{
+    margin: 20px;
+    padding:10px 30px;
+    border: 1px solid black;
+
+}
+.btn:hover{
+    background-color: darkturquoise;
+    color: deeppink;
+    border: 1px solid pink;
+}

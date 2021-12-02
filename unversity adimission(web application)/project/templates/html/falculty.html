@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> falculty profile</title>
+    <!-- <link rel="stylesheet" href="/static/css/falculty.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/falculty.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="items">
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a>About-Us</a></li>
+            <li class="item"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="content1">
+        <h2 class="heading">Profile </h2>
+        {% for data1 in d11 %}
+        <div class="subcontent">
+            <div class="leftcontent">
+                <p class="label"><b>Name:</b>{{data1['fname']}} {{data1['lname']}}</p>
+                <p class="label"><b>Email-id:</b>{{data1['email']}}</p>
+            </div>
+            <div class="rightcontent">
+                <p class="label"><b>ID NO:</b>{{data1['idno']}}</p>
+                <a href="{{ url_for('logout') }}" id="logout">LOGOUT</a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="maindata">
+        <div class="div1">
+            <h3>Not checked students list:-</h3>
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Email</th>
+                    <th>Check</th>
+                </tr>
+                {% if a11 is not none %}
+                {% for data in a11 %}
+                
+                <tr>
+                    <td>{{data['fullname']}}</td>
+                    <td>{{data['coursename']}}</td>
+                    <td>{{data['email']}}</td>
+
+                    <td>
+                        <form action="/falculty" method="POST">
+                            <input type="text" value={{data['email']}} name="email" hidden="hidden">
+                            <input type="submit" value="click to Check" id="button">
+                        </form>
+                    </td>
+                    {% endfor %}{% endif %}
+                </tr>
+            </table>
+        </div>
+        <div class="div2">
+            <h3>Approved students list:-</h3>
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+                {% if a22 is not none %}
+                {% for data2 in a22 %}
+                
+                <tr>
+                    <td>{{data2['fullname']}}</td>
+                    <td>{{data2['coursename']}}</td>
+                </tr>{% endfor %}{% endif %}
+            </table>
+        </div>
+        <div class="div3">
+            <h3>Disapproved students list:-</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+                {% if a33 is not none %}
+                {% for data3 in a33 %}
+                
+                <tr>
+                    <td>{{data3['fullname']}}</td>
+                    <td>{{data3['coursename']}}</td>
+                </tr>{% endfor %}{% endif %}
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>

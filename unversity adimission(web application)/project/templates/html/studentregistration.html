@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><title>registrationpage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/studentregistration.css') }}">
+        <!-- <link rel="stylesheet" href="/static/css/studentregistration.css"> -->
+
+    </head>
+    <body>
+        <form action="" method="POST">
+        <div id="main" >
+            <label>First name:</label>
+            <input class="item" type="text" name="fname" placeholder="Enter your firstname:" autofocus required><br><br>
+            <label>Last name:</label>
+            <input class="item" type="text" name="lname" placeholder="Enter your LAstname:" required><br><br>
+            <label>E-mail:</label>
+            <input class="item" type="email" name="email" placeholder="Enter your email id:" required><br><br>
+            <label>Mob.no:</label>
+            <input class="item" type="number" name="mobno" placeholder="Enter mobile no:" required><br><br>
+            
+            <label>Date of Birth:</label>
+            <input class="item" type="date" name="datebirth" required><br><br>
+            <label> Password:</label>
+            <input class="item" type="password" name="password" placeholder="Enter password:" required><br><br>
+            
+            <br><br>
+
+            
+            <div id="buttons">
+                <input class="bu" type="submit" name="submit">
+                <input class="bu" type="reset" name="reset">
+
+            </div>
+           
+        </form>
+
+            
+        </div>
+    </body>
+</html>

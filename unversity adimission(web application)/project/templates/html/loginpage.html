@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginpage.css') }}">
+    <!-- <link rel="stylesheet" href="/static/css/loginpage.css"> -->
+
+</head>
+
+<body id="main">
+    <nav id="navbar">
+        <ul>
+            <li class="items"><a href="#">HOME</a></li>
+            <li class="items"><a href="#">HELP</a></li>
+            <li class="items"><a href="{{ url_for('contact') }}">CONTACT</a></li>
+
+        </ul>
+
+    </nav>
+    <div class="btn">
+
+
+    </div>
+
+    <section id="content">
+        <div id="form">
+            <form method="POST" action="/login">
+                <label class="label1" for="name">Username:</label>
+                <input type="text" name="username" id="name" placeholder="Enter your username:" required>
+                <br><br>
+                <label class="label1" for="pass">Password:</label>
+                <input type="password" name="password" id="pass" placeholder="Enter your password:" required>
+                <br><br>
+                <label class="label1">Student:</label>
+                <input class="item" type="radio" name="radiobu" value="student" checked="checked"><br>
+                <label class="label1">Faculty:</label>
+                <input class="item" type="radio" name="radiobu" value="falculty">
+                <br><br><br><br>
+                <input class="b1" type="submit" value="Login">
+                <input class="b1" type="reset" value="clear">
+                <br>
+
+                <br>
+                <a href=" " id="forget"><P class="label1">Forgot password</P></a>
+
+
+
+
+            </form>
+            <!-- <a href="./studentform.html">student</a> -->
+        </div>
+    </section>
+
+
+</body>
+
+
+</html>

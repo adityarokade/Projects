@@ -1,0 +1,33 @@
+body{
+    background-image: url(../images/img/bk3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main{
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 440px;
+    height: 100%;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 200px;
+    background-image: url(../images/img/bk2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.item{
+   
+    padding: 5px;
+    margin-left: 20px;
+}
+#buttons{
+    margin-left: 150px;
+    color: lightseagreen;
+    
+}
+.bu:hover{
+    background-color: blue;
+    color: brown;
+}

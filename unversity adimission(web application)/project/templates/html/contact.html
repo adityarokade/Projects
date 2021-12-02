@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <!-- <link rel="stylesheet" href="/static/css/contact.css"> -->
+    <title>contact</title>
+</head>
+<body>
+       <!-- contact section start -->
+       <section class="contact">
+        <div>
+            <h1 class="contact-heading">Contact US</h1>
+        </div>
+        <div class="contact-body">
+            <div class="contact-form">
+                <form action="" method="GET">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message" autofocus required></textarea>
+                    <div id="name-email">
+                        <input type="text" name="name" id="name" placeholder="Enter your Name:" required>
+                        <input type="email" name="email" id="email" placeholder=" Enter E-Mail:" required>
+                    </div>
+                    <div>
+                        <input type="text" name="subject" id="subject" placeholder="Enter Subject" required>
+                    </div>
+                    <button class="btn">SEND</button>
+                </form>
+            </div>
+</body>
+</html>

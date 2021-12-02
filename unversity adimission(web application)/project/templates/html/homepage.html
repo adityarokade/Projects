@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="view">
+        <nav class="navbar">
+            <div class="leftnav">
+                <ul class="navitems">
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">About-Us</a></li>
+                    <li class="item"><a href="{{ url_for('contact') }}">contact</a></li>
+
+
+                </ul>
+            </div>
+            <div class="rightnav">
+                <form id="searchnav">
+                    <input type="text" name="search">
+                    <input type="submit" value="search" class="searchbutton btn">
+                </form>
+            </div>
+
+        </nav>
+        
+        <section class="section1">
+            <!-- <div> -->
+            <h2 class="primaryheading">ABC UNVERSITY</h2>
+            <!-- </div> -->
+            <div class="midsection">
+                <div class="leftsection1">
+                    <p class="para1">WELCOME to ABC unversity ,we are providing the best education
+                        and graduation in various courses-BE
+                    </p>
+                    <p class="para2">we are providing not only a paper degree but a real understanging 
+                        in perticular courses,our old students are now doing a best jobs,we are conducting
+                        a campus selection,various companyes are comming to our campus and select a students
+                    </p>
+                </div>
+                <div class="rightsection1">
+                    <img src="{{ url_for('static', filename='images/img/edu1.jpg') }}" alt="edu1">
+                </div>
+            </div>
+            <div class="bsection1">
+                
+                <div><a class="login" href="{{ url_for('login') }}"><b>click to LOGIN</b></a></div>
+                <p id="reg1">Click to Registration</p>
+            <div id="register"><a class="signup" href="{{ url_for('studentregistration') }}"><b>STUDENT</b></a>
+
+            <a class="signup" href="{{ url_for('falcultyregistration') }}"><b>FALCULTY</b></a></div>
+
+
+
+
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>

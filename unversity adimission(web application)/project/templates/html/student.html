@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/student.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="items">
+            <li class="item"><a>Home</a></li>
+            <li class="item"><a>About-Us</a></li>
+            <li class="item"><a href="{{ url_for('contact') }}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+    <section class="content1">
+        <h2 class="heading">Profile </h2>
+        {% for data in l11 %}
+        <div class="subcontent">
+            <div class="leftcontent">
+                <p class="labelr">Name:{{data['fname']}} {{data['lname']}}</p>
+                <p class="labelr">Email-id:{{data['email']}}}</p>
+            </div>
+            <div class="rightcontent">
+                <p class="labell">Date of Birth:{{data['datebirth']}}</p>
+                <p class="labell">Mobile no:{{data['mobno']}}</p>
+                <a href="{{ url_for('logout') }}" style="color: red;">LOGOUT</a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    {% if d11 %}
+    {% for data1 in d11 %}
+    <div class="formdata">
+        <p class="data">Course Name:-{{data1['coursename']}}</p>
+        <p class="data">Sub-Course Name:-{{data1['subcourse']}}</p>
+        <p class="data">Application status:-{{data1['applicationstatus']}}</p>
+        <p class="data">Appointment Date For Interview:-{{data1['interview_appointment']}}</p>
+    </div>
+    <div class="modfy">
+        
+      
+        <a class="form" href="{{ url_for('mo') }}"><b> click to MODIFY FORM</b></a>
+    </div>{% endfor %}
+    {% endif %}
+
+
+
+    <br><br>
+    {% if not d11 %}
+    <div id="fillform">
+        <a class="fillform" href="{{ url_for('form') }}"><b>click to FILL FORM</b></a>
+    </div>
+    {% endif %}
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+        <h1>email- {{l11}}<br></h1>
+        <h1>fname- {{l22}}<br></h1>
+        <h1> lname={{l22}}<br></h1>
+        <h1>mobno={{l44}}<br></h1>
+        <h1>dob= {{l55}}<br></h1>
+    </div> -->

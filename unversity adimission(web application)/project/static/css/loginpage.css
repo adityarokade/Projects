@@ -1,0 +1,123 @@
+/*homepage styling*/
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color:lightblue; */
+    
+    background-image: url(../images/img/n3.jpg);
+    background-size:cover;
+    background-blend-mode:darken;
+}
+
+#navbar{
+    display: flex;
+    font-size: 20px;
+    /* content: ""; */
+    /* background-color:lightslategray; */
+    height: 40%;
+    width: 100%;
+    /* position:relative;
+    opacity: 0.8; */
+    
+    
+}
+#navbar ul{
+    display: flex;
+    
+}
+/*#navbar::after{
+    content: "";
+    background-color: black;
+    height: 80%;
+    width: 100%;
+    position:relative;
+    opacity: 0.8;
+    z-index: -1;
+    
+}   */
+#navbar ul li{
+    list-style:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}
+#navbar ul li a{
+    display: block;
+    padding: 3px 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    
+    color:rgb(203, 230, 206);
+   }
+#navbar ul li a:hover{
+    background-color:white;
+    border-radius: 15px;
+    color:black;
+}
+#content{
+    padding-left: 300px;
+    padding-top: 50px;
+    width: 600px;
+    
+    
+
+}
+#form{
+    padding: 100px;
+    border: 1px solid blue;
+    /* background-color:peachpuff; */
+    border-radius: 30px;
+    background-image:url(../images/img/n3.jpg) ;
+    height: 250px;
+    /* background-color:rgba(255, 230, 0, 0.925); */
+
+    background-size: cover;
+    
+}
+#name,#pass{
+    padding: 8px;
+    width: 230px;
+    border: 1px solid rgb(20, 12, 12);
+    border-radius: 15px;
+    background:transparent ;
+    color: rgba(255, 230, 0, 0.925);
+    /* text-decoration: rgba(255, 230, 0, 0.925); */
+    font-size: 18px;
+    
+}
+.label1{
+    font-size: 20px;
+    color: rgba(255, 230, 0, 0.925);
+}
+.b1{
+    color:blue;
+    color: rgb(150, 9, 107);
+    padding: 2px;
+    cursor: pointer;
+    size: 2in;
+    border-color: pink;
+    font-size: 18px;
+    background-color: rgb(135, 222, 150);
+
+    text-decoration: none;
+}
+.b1:hover{
+    color: darkblue;
+}
+#forget{
+    text-decoration: none;
+    
+}
+.btn{
+    
+    float: right;
+    margin-right: 20px;
+}
+.forget{
+    color: rgba(255, 230, 0, 0.925);
+
+}
+

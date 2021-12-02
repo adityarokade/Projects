@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students imformation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkpage.css') }}">
+    
+    <!-- <link rel="stylesheet" href="/static/css/checkpage.css"> -->
+</head>
+
+<body>
+    <h2 class="heading">-:Students data:-</h2>
+    {% if d11 %}
+    {% for data in d11 %}
+    <section class="content1">
+        <div class="personalinfo">
+            <p>Students Full Nmae:{{data['fullname']}}</p>
+            <p>Father's Full Nmae:{{data['fname']}}</p>
+            <p>Father's Education:{{data['fathereducation']}}</p>
+            <p>Father's Occupation:{{data['fatheroccupation']}}</p>
+            <p>Mother's Full Name:{{data['mname']}}</p>
+            <p>Mother's Education:{{data['mothereducation']}}</p>
+            <p>Mother's Occupation:{{data['motheroccupation']}}</p>
+            <p>Gender:{{data['gender']}}</p>
+            <p>Age:{{data['age']}}</p>
+            <p>Date of birth:{{data['dob']}}</p>
+            <p>Addher-NO:{{data['addher']}}</p>
+
+
+        </div>
+        <div class="addressinfo">
+            <p>Current Address:-<br>{{data['current_address']}}</p>
+            <p></p>
+            <p>Permanent Address:-<br>{{data['permanent_address']}}</p>
+
+            <p></p>
+
+        </div>
+    </section>
+    <section class="content2">
+        <div class="educationalinfo">
+            <p>10th Board Nmae:{{data['xthbordname']}}</p>
+            <p>10th passing Year:{{data['xthpassyear']}}</p>
+            <p>10th Mark's:{{data['xthmark']}}</p>
+            <p>10th School Name:{{data['xthschoolname']}}</p><br>
+            <p>12th Board Name:{{data['xiithbordname']}}</p>
+            <p>12th Pass year:{{data['xiithpassyear']}}</p>
+            <p>12th Mark's:{{data['xiithmark']}}</p>
+            <p>In Percentage(%):{{data['inpercentage']}}</p>
+            <p>12th School:{{data['schoolname']}}</p>
+            <p>Group:{{data['xiithgroup']}}</p>
+            <p>Math:{{data['math']}}</p>
+            <p>Biology:{{data['biology']}}</p>
+            <p>Chemistary:{{data['chemistary']}}</p>
+            <p>Physics:{{data['physics']}}</p>
+            <p></p>
+        </div>
+        <div class="courseinfo">
+            <p> Selected Course:{{data['coursename']}}</p>
+            <p> Selected Sub-Course:{{data['subcourse']}}</p>
+        </div>
+    </section>
+    <section class="review">
+        <form action="/check" method="POST">
+            <div class="re">
+                <label for="review1">Approve/Disapprove:-</label>
+                <input type="text" list="review" id="review1" name="review" placeholder="Select:-" required>
+                <datalist id="review">
+                    <option value="Approve">Approve</option>
+                    <option value="Disapprove">Disapprove</option>
+
+                </datalist>
+                <label for="Appointment_date">Appointment date:-</label>
+                <input type="date" name="date">
+            </div>
+            <input type="submit" value="checked" id="btn">
+        </form>
+    </section>{% endfor %}
+    {% endif %}
+</body>
+
+</html>

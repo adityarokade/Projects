@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: cadetblue;
+}
+.heading h2{
+     text-align: center;
+     margin-top: 100px;
+}
+.form{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.form div{
+    margin: 50px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    
+}
+#b1{
+    padding: 8px 28px;
+}
+#b1:hover{
+    background-color: chartreuse;
+    color: darkorange;
+}
+input{
+    padding: 7px;
+}
+label{
+    color: chartreuse;
+    font-size: 18px;
+}

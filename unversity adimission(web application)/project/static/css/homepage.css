@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:ital,wght@1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.view{
+    background-image:url(../images/img/city1.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+    
+    
+}
+.navbar{
+    display: flex;
+    height: 100px;
+    
+}
+    
+.leftnav{
+    width: 60%;
+}
+.navitems{
+    display: flex;
+    margin-left: 10%;
+}
+.navitems li{
+    list-style: none;
+}
+.navitems li a{
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    color: darkkhaki;
+}
+.navitems li a:hover{
+    background-color: darkblue;
+    border-radius: 20px;
+}
+.rightnav{
+    width: 40%;
+   
+}
+#searchnav{
+    float: right;
+    margin-top: 15px;
+    margin-right: 5%;
+   
+}
+#searchnav input{
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+
+/* section1 css */
+
+.primaryheading{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 60px;
+    color: cyan;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.midsection{
+    display: flex;
+    margin-top: 50px;
+    height: 210px;
+}
+.para1,.para2{
+    /* color: cornflowerblue; */
+    color: blanchedalmond;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.leftsection1{
+    width: 70%;
+    margin-left: 16%;
+}
+.leftsection1 p{
+    text-align: center;
+}
+.rightsection1{
+    width: 25%;
+    margin-left: 15%;
+
+}
+
+.rightsection1 img{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 2px solid pink;
+}
+.bsection1{
+    height: 150px;
+   margin-left: 25%;
+}
+.login,.signup{
+    color: gold;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.login:hover,.signup:hover{
+    color: blue;
+}
+.login{
+    margin-left: 250px;
+    /* background-color: cyan;
+    border:1px solid darkgoldenrod; */
+}
+#reg1{
+    margin-left: 250px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: deeppink;
+}
+.signup{
+    padding: 10px;
+
+}
+#register{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+/* .login:hover,.signup:hover{
+    background-color: cyan;
+    font-size: 25px;
+} */
+/* .signup{
+    margin-left: 9px;
+} */
+
